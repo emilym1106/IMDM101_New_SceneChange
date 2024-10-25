@@ -12,7 +12,7 @@ public class CollideTrigger : MonoBehaviour
     // Print out the current scene's name
             Debug.Log(SceneManager.GetActiveScene().name);
             // Change scene
-            SceneManager.LoadScene("Scene_2_test");
+            SceneManager.LoadScene("BeeTest");
     }
    }
 

@@ -51,6 +51,9 @@ public class PlayerContolBee : MonoBehaviour
         {
             // Calculate the desired rotation based on movement direction
             Quaternion targetRotation = Quaternion.LookRotation(movement);
+            // Adjust the target rotation to keep a fixed Y rotation of -90
+            targetRotation = Quaternion.Euler(targetRotation.eulerAngles.x, targetRotation.eulerAngles.y - 90, targetRotation.eulerAngles.z);
+
             // Interpolate the rotation for smoother transition
             rb.MoveRotation(Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * speed));
         }
@@ -77,12 +80,5 @@ public class PlayerContolBee : MonoBehaviour
     }
    }
      
-  /*    private void OnCollisionEnter(Collision collision)
-    {
-        // Check if the player has collided with the ground to allow jumping again
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
-    }*/
+
 }
