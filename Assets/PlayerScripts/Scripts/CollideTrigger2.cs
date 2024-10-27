@@ -22,7 +22,7 @@ public class CollideTrigger2 : MonoBehaviour
             // Print out the current scene's name
             Debug.Log(SceneManager.GetActiveScene().name);
             // Change scene
-            SceneManager.LoadScene("PlayerBearPlayTest");
+            SceneManager.LoadScene("FinalScene");
         }
         else if (other.CompareTag("Player"))
         {

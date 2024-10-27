@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BeeScene.unity
     guid: 183966e25645cdc458e9b5323e16936e
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: 394121bba6391db4594b4e0979961adc
   m_configObjects: {}
