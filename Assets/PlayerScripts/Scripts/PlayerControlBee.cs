@@ -70,15 +70,19 @@ public class PlayerContolBee : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other) 
-   {
-    count = count + 1;
-    if(other.gameObject.CompareTag("Flower"))
+    void OnTriggerEnter(Collider other)
     {
-        other.gameObject.SetActive(false);
-       
+        if (other.gameObject.CompareTag("Flower"))
+        {
+            other.gameObject.SetActive(false);
+            count++;
+            Debug.Log("Flowers collected: " + count);
+        }
     }
-   }
-     
+
+    public int GetFlowerCount()
+    {
+        return count;
+    }
 
 }
