@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TreesAndAll.unity
     guid: 0eaa12813e56dfc47b59faf4379cf5f8
+  - enabled: 1
+    path: Assets/Scenes/BeeScene.unity
+    guid: 183966e25645cdc458e9b5323e16936e
   m_configObjects: {}
