@@ -5,15 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class CollideTrigger : MonoBehaviour
 {
-   private void OnTriggerEnter (Collider other)
-   {
-    if (other.tag == "Player")
+    private void OnTriggerEnter(Collider other)
     {
-    // Print out the current scene's name
+        
             Debug.Log(SceneManager.GetActiveScene().name);
             // Change scene
             SceneManager.LoadScene("BeeScene");
+        
+      
+      
     }
-   }
-
-   }
+}
