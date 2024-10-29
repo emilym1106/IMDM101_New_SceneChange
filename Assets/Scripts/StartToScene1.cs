@@ -9,7 +9,7 @@ public class StartToScene1 : MonoBehaviour
 
     public void GoToScene1() 
     {
-        SceneManager.LoadScene("TreesAndAll");
+        SceneManager.LoadScene("BearScene");
     
     }
 
