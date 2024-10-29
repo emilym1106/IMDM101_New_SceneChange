@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Startuppage.unity
     guid: bfacec6fc69ff214497ac7156e1fc131
   - enabled: 1
-    path: Assets/Scenes/TreesAndAll.unity
+    path: Assets/Scenes/BearScene.unity
     guid: 0eaa12813e56dfc47b59faf4379cf5f8
   - enabled: 1
     path: Assets/Scenes/BeeScene.unity
