@@ -30908,6 +30908,7 @@ MonoBehaviour:
   speed: 50
   jumpForce: 25
   gravityMultiplier: -10
+  objectiveText: {fileID: 0}
 --- !u!114 &1371660290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35924,6 +35925,9 @@ MonoBehaviour:
   player: {fileID: 1371660288}
   rotationSpeed: 5
   smoothSpeed: 1
+  zoomSpeed: 2
+  maxZoom: 20
+  minZoom: 5
 --- !u!1 &1568236315
 GameObject:
   m_ObjectHideFlags: 0
@@ -44753,8 +44757,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: You did it! Time for a picnic!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6d6307c5497b6384f8b4ba43a764318e, type: 2}
+  m_sharedMaterial: {fileID: 2169219037127199724, guid: 6d6307c5497b6384f8b4ba43a764318e,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -44778,8 +44783,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 4.21
+  m_fontSizeBase: 4.21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -44843,7 +44848,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 2169219037127199724, guid: 6d6307c5497b6384f8b4ba43a764318e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
