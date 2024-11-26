@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 
 
@@ -16,11 +17,27 @@ public class PlayerContol : MonoBehaviour
     private bool isGrounded = true;
     public float gravityMultiplier = 0;
     // Start is called before the first frame update
+    public TextMeshProUGUI objectiveText;
     void Start()
     {
         count = 0;
         rb = GetComponent<Rigidbody>();
-       
+        
+        SetObjectiveText();
+        StartCoroutine(ChangeObjectiveAfterDelay(5.0f));
+    }
+     void SetObjectiveText()
+    {
+        objectiveText.text = "You are hungry";
+        
+
+    }
+    IEnumerator ChangeObjectiveAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay); // Wait for the specified delay
+        objectiveText.text = "Go find the honey!";
+        yield return new WaitForSeconds(delay);
+        objectiveText.text = "Objective: Find the Honey.";
     }
      void OnMove(InputValue movementValue)
     {
