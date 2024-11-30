@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 595858425592636682}
   - component: {fileID: 2012155292582284627}
   - component: {fileID: 5220041287842698453}
+  - component: {fileID: 3905604216922016817}
   m_Layer: 0
   m_Name: flower
   m_TagString: Flower
@@ -122,3 +123,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swayAmount: 5
   swaySpeed: 2
+--- !u!114 &3905604216922016817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2362741576814472591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12c0473a7d87e47be6448bc5e2d556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
