@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CollideTrigger : MonoBehaviour
 {
+    [SerializeField] Animator transitionAnim;
     private void OnTriggerEnter(Collider other)
     {
 
@@ -15,7 +16,7 @@ public class CollideTrigger : MonoBehaviour
             {
                 transitionAnim.SetTrigger("End");
                 yield return new WaitForSeconds(1);
-                SceneManager.LoadScene("TerrainBee");
+                SceneManager.LoadScene("BeeScene");
                 transitionAnim.SetTrigger("Start");
 
             }
