@@ -7,15 +7,6 @@ public class CollideTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-<<<<<<< Updated upstream
-        
-            Debug.Log(SceneManager.GetActiveScene().name);
-            // Change scene
-            SceneManager.LoadScene("BeeScene");
-        
-      
-      
-=======
 
         Debug.Log(SceneManager.GetActiveScene().name);
         {
@@ -35,6 +26,5 @@ public class CollideTrigger : MonoBehaviour
 
         }
     
->>>>>>> Stashed changes
     }
 }
