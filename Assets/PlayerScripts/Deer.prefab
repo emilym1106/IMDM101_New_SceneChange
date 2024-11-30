@@ -110,7 +110,38 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5384648118533880042}
+    - targetCorrespondingSourceObject: {fileID: -7695841690960611292, guid: 466e284b97074fc40a288c98805bbf4d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3083539920460942564}
   m_SourcePrefab: {fileID: 100100000, guid: 466e284b97074fc40a288c98805bbf4d, type: 3}
+--- !u!1 &4892758056038988698 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7695841690960611292, guid: 466e284b97074fc40a288c98805bbf4d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6256750331217363902}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3083539920460942564
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4892758056038988698}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8, y: 1.7, z: 0.5}
+  m_Center: {x: -0.7344737, y: 0.897456, z: 0.39849013}
 --- !u!1 &6491121475423698671 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 466e284b97074fc40a288c98805bbf4d,
@@ -127,7 +158,7 @@ Animator:
   m_GameObject: {fileID: 6491121475423698671}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a8eeb2c1439a314595e0458fe03131b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -183,6 +214,7 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
+  animator: {fileID: 0}
 --- !u!195 &5384648118533880042
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -193,7 +225,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

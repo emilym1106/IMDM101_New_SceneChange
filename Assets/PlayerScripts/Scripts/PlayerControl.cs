@@ -6,7 +6,7 @@ using TMPro;
 
 
 
-public class PlayerContol : MonoBehaviour
+public class PlayerControl : MonoBehaviour
 {
     private Rigidbody rb;
     private int count;
@@ -15,23 +15,23 @@ public class PlayerContol : MonoBehaviour
     public float speed = 0;
     public float jumpForce = 0;
     private bool isGrounded = true;
-    public float gravityMultiplier = 0;
-    // Start is called before the first frame update
+    public float gravityMultiplier = 2.0f; // Increased multiplier for air control
+
+    // UI for objective text
     public TextMeshProUGUI objectiveText;
+
     void Start()
     {
-        count = 0;
         rb = GetComponent<Rigidbody>();
-        
         SetObjectiveText();
         StartCoroutine(ChangeObjectiveAfterDelay(5.0f));
     }
-     void SetObjectiveText()
+
+    void SetObjectiveText()
     {
         objectiveText.text = "You are hungry";
-        
-
     }
+
     IEnumerator ChangeObjectiveAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay); // Wait for the specified delay
@@ -39,14 +39,15 @@ public class PlayerContol : MonoBehaviour
         yield return new WaitForSeconds(delay);
         objectiveText.text = "Objective: Find the Honey.";
     }
-     void OnMove(InputValue movementValue)
+
+    void OnMove(InputValue movementValue)
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
-        movementX = movementVector.x; 
-        movementY = movementVector.y; 
-
+        movementX = movementVector.x;
+        movementY = movementVector.y;
     }
-       void OnJump(InputValue value)
+
+    void OnJump(InputValue value)
     {
         // Check if the jump input is pressed and the player is grounded
         if (isGrounded && value.isPressed)
@@ -56,25 +57,24 @@ public class PlayerContol : MonoBehaviour
         }
     }
 
-     private void FixedUpdate()
+    private void FixedUpdate()
     {
-       // Get the camera's forward and right directions
+        // Get the camera's forward and right directions
         Camera camera = Camera.main; // Ensure you have a camera tagged as "MainCamera"
         Vector3 cameraForward = camera.transform.forward;
         Vector3 cameraRight = camera.transform.right;
 
         // Flatten the camera forward vector
-        cameraForward.y = 0; 
+        cameraForward.y = 0;
         cameraForward.Normalize();
         cameraRight.y = 0;
         cameraRight.Normalize();
 
         // Calculate movement direction based on camera orientation
         Vector3 movement = (cameraRight * movementX + cameraForward * movementY).normalized;
+        rb.AddForce(movement * speed);
 
-        rb.AddForce(movement*speed);
-        
-     if (movement != Vector3.zero) // Check if there is any movement input
+        if (movement != Vector3.zero) // Check if there is any movement input
         {
             // Calculate the desired rotation based on movement direction
             Quaternion targetRotation = Quaternion.LookRotation(movement);
@@ -84,13 +84,14 @@ public class PlayerContol : MonoBehaviour
             rb.MoveRotation(Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * speed));
         }
 
+        // Only apply custom gravity when the player is not grounded
         if (!isGrounded)
         {
             rb.AddForce(Vector3.down * gravityMultiplier * Physics.gravity.y, ForceMode.Acceleration);
         }
     }
-  
-      private void OnCollisionEnter(Collision collision)
+
+    private void OnCollisionEnter(Collision collision)
     {
         // Check if the player has collided with the ground to allow jumping again
         if (collision.gameObject.CompareTag("Ground"))

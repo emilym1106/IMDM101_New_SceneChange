@@ -89,6 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   changeDirectionTime: 3
+  heightPosition: 15
 --- !u!1 &3753973050299529962 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100068, guid: 221f97476fc29794da96ee45e1fb7f2e,

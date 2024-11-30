@@ -16,11 +16,39 @@ public class PlayerContolBee : MonoBehaviour
     private bool isGrounded = true;
     public float gravityMultiplier = 0;
     // Start is called before the first frame update
+    public TextMeshProUGUI objectiveText;
     void Start()
     {
         count = 0;
         rb = GetComponent<Rigidbody>();
-       
+        SetObjectiveText();
+        StartCoroutine(ChangeObjectiveAfterDelay(5.0f));
+    }
+
+     void SetObjectiveText()
+    {
+        objectiveText.text = "Looks like your pot is empty";
+        
+
+    }
+    IEnumerator ChangeObjectiveAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay); // Wait for the specified delay
+        objectiveText.text = "Go find and collect at least 5 red flowers";
+        yield return new WaitForSeconds(delay);
+        StartCoroutine(UpdateObjectiveText());
+    }
+     
+    IEnumerator UpdateObjectiveText()
+    {
+     while (count < 5) // Continue updating until 5 flowers are collected
+     {
+        objectiveText.text = $"Objective: Find 5 Red Flowers.\n{count} Flowers Collected";
+        yield return null; // Wait until the next frame
+        }
+
+    // Objective complete message once 5 flowers are collected
+    objectiveText.text = "You collected 5 red flowers! Now return to your pot!";
     }
      void OnMove(InputValue movementValue)
     {

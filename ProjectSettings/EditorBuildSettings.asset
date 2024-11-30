@@ -11,13 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Startuppage.unity
     guid: bfacec6fc69ff214497ac7156e1fc131
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BearScene.unity
     guid: 0eaa12813e56dfc47b59faf4379cf5f8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BeeScene.unity
     guid: 183966e25645cdc458e9b5323e16936e
   - enabled: 1
     path: Assets/Scenes/FinalScene.unity
     guid: 394121bba6391db4594b4e0979961adc
+  - enabled: 1
+    path: Assets/Scenes/TerrainBear.unity
+    guid: 337b3555298819c41b4ebe2e49abfc69
+  - enabled: 1
+    path: Assets/Scenes/TerrainBee.unity
+    guid: 6d4d51f00c34deb4eb7ec0c896d9e477
   m_configObjects: {}

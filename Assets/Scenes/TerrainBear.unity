@@ -1019,6 +1019,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8857724146516977862, guid: 409d0d331408c2c4384f1b044949427b,
         type: 3}
+      propertyPath: m_Drag
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857724146516977862, guid: 409d0d331408c2c4384f1b044949427b,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857724146516977862, guid: 409d0d331408c2c4384f1b044949427b,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857724146516977862, guid: 409d0d331408c2c4384f1b044949427b,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857724146516977862, guid: 409d0d331408c2c4384f1b044949427b,
+        type: 3}
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
@@ -1184,12 +1204,12 @@ PrefabInstance:
     - target: {fileID: 3753973050299229838, guid: df9fe29a24740aa4e85c592d82132377,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.948671
+      value: 16.05
       objectReference: {fileID: 0}
     - target: {fileID: 3753973050299229838, guid: df9fe29a24740aa4e85c592d82132377,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -57.99473
+      value: -53.38
       objectReference: {fileID: 0}
     - target: {fileID: 3753973050299229838, guid: df9fe29a24740aa4e85c592d82132377,
         type: 3}
@@ -1305,6 +1325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424884711481717767, guid: aba07a1dc46f04f4ca4d7683c5627b8b,
+        type: 3}
+      propertyPath: m_Height
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6491121475423698671, guid: aba07a1dc46f04f4ca4d7683c5627b8b,
         type: 3}
@@ -1743,7 +1768,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 033ec24ca3f6a1a40ad4b6b418e6a452, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 3dc31dbfb2cbdc745bf2e1b8bcc7ae8e, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &926131047
 GameObject:
@@ -2116,7 +2141,7 @@ MonoBehaviour:
   rotationSpeed: 10
   smoothSpeed: 1
   zoomSpeed: 25
-  maxZoom: 20
+  maxZoom: 25
   minZoom: 5
 --- !u!114 &1227595949
 MonoBehaviour:
@@ -3080,7 +3105,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 679945815f93d624c9d036ab9ed03311,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.653
+      value: 3.46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 679945815f93d624c9d036ab9ed03311,
         type: 3}

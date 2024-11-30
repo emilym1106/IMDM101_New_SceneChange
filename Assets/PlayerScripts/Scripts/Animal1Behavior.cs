@@ -4,22 +4,36 @@ using UnityEngine;
 
 public class Animal1Behavior : MonoBehaviour
 {
-public float moveRadius = 10f;     // Radius within which NPC will move
-    public float waitTime = 2f;        // Time NPC waits before moving again
-    public float avoidanceRadius = 3f; // Radius to avoid other NPCs
-    public LayerMask obstacleLayer;    // Layer for obstacles
+    public float moveRadius = 10f;        // Radius within which NPC will move
+    public float waitTime = 2f;           // Time NPC waits before moving again
+    public float avoidanceRadius = 3f;    // Radius to avoid other NPCs
+    public LayerMask obstacleLayer;       // Layer for obstacles
     private UnityEngine.AI.NavMeshAgent agent;
     private Vector3 targetPosition;
     private float timer;
 
+    public Animator animator;             // Reference to the Animator component
+
     void Start()
     {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+
+        // If animator is not assigned, try to get it automatically
+        if (animator == null)
+            animator = GetComponent<Animator>();
+
         MoveToRandomPosition();
     }
 
     void Update()
     {
+        // Update the Animator's Speed parameter based on the agent's velocity
+        if (agent != null)
+        {
+            float speed = agent.velocity.magnitude;
+            animator.SetFloat("Speed", speed);
+        }
+
         if (IsAgentOnNavMesh() && !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
             timer += Time.deltaTime;
