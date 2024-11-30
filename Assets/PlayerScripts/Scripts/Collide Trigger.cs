@@ -16,7 +16,7 @@ public class CollideTrigger : MonoBehaviour
             {
                 transitionAnim.SetTrigger("End");
                 yield return new WaitForSeconds(1);
-                SceneManager.LoadScene("BeeScene");
+                SceneManager.LoadScene("TerrainBee");
                 transitionAnim.SetTrigger("Start");
 
             }
