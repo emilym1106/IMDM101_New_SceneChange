@@ -5,6 +5,12 @@ using UnityEngine.InputSystem;
 using TMPro;
 
 
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using TMPro;
+
 public class PlayerContolBee : MonoBehaviour
 {
     private Rigidbody rb;
@@ -15,8 +21,9 @@ public class PlayerContolBee : MonoBehaviour
     public float jumpForce = 0;
     private bool isGrounded = true;
     public float gravityMultiplier = 0;
-    // Start is called before the first frame update
+    public float maxHeight = 10.0f; // Set the maximum height limit
     public TextMeshProUGUI objectiveText;
+
     void Start()
     {
         count = 0;
@@ -25,12 +32,11 @@ public class PlayerContolBee : MonoBehaviour
         StartCoroutine(ChangeObjectiveAfterDelay(5.0f));
     }
 
-     void SetObjectiveText()
+    void SetObjectiveText()
     {
         objectiveText.text = "Looks like your pot is empty";
-        
-
     }
+
     IEnumerator ChangeObjectiveAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay); // Wait for the specified delay
@@ -38,26 +44,27 @@ public class PlayerContolBee : MonoBehaviour
         yield return new WaitForSeconds(delay);
         StartCoroutine(UpdateObjectiveText());
     }
-     
+
     IEnumerator UpdateObjectiveText()
     {
-     while (count < 5) // Continue updating until 5 flowers are collected
-     {
-        objectiveText.text = $"Objective: Find 5 Red Flowers.\n{count} Flowers Collected";
-        yield return null; // Wait until the next frame
+        while (count < 5) // Continue updating until 5 flowers are collected
+        {
+            objectiveText.text = $"Objective: Find 5 Red Flowers.\n{count} Flowers Collected";
+            yield return null; // Wait until the next frame
         }
 
-    // Objective complete message once 5 flowers are collected
-    objectiveText.text = "You collected 5 red flowers! Now return to your pot!";
+        // Objective complete message once 5 flowers are collected
+        objectiveText.text = "You collected 5 red flowers! Now return to your pot!";
     }
-     void OnMove(InputValue movementValue)
+
+    void OnMove(InputValue movementValue)
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
-        movementX = movementVector.x; 
-        movementY = movementVector.y; 
-
+        movementX = movementVector.x;
+        movementY = movementVector.y;
     }
-     private void FixedUpdate()
+
+    private void FixedUpdate()
     {
         // Get the camera's forward and right directions
         Camera camera = Camera.main; // Ensure you have a camera tagged as "MainCamera"
@@ -65,7 +72,7 @@ public class PlayerContolBee : MonoBehaviour
         Vector3 cameraRight = camera.transform.right;
 
         // Flatten the camera forward vector
-        cameraForward.y = 0; 
+        cameraForward.y = 0;
         cameraForward.Normalize();
         cameraRight.y = 0;
         cameraRight.Normalize();
@@ -86,8 +93,8 @@ public class PlayerContolBee : MonoBehaviour
             rb.MoveRotation(Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * speed));
         }
 
-        // Apply continuous jumping if the space key is held down
-        if (Input.GetKey(KeyCode.Space))
+        // Apply continuous jumping if the space key is held down and height is within the limit
+        if (Input.GetKey(KeyCode.Space) && transform.position.y < maxHeight)
         {
             rb.AddForce(Vector3.up * jumpForce * Time.fixedDeltaTime, ForceMode.Impulse);
         }
@@ -112,5 +119,4 @@ public class PlayerContolBee : MonoBehaviour
     {
         return count;
     }
-
 }
