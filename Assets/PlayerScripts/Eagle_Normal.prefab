@@ -64,6 +64,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1180841871778575505}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 221f97476fc29794da96ee45e1fb7f2e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3107478802178525378}
     - targetCorrespondingSourceObject: {fileID: 100068, guid: 221f97476fc29794da96ee45e1fb7f2e,
         type: 3}
       insertIndex: -1
@@ -90,6 +94,26 @@ MonoBehaviour:
   speed: 5
   changeDirectionTime: 3
   heightPosition: 20
+--- !u!114 &3107478802178525378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3753973050299529902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 125eba2546a837f45b09b783c990d1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalSounds:
+  - {fileID: 8300000, guid: 03b866357e803664590ad1fb1400e3be, type: 3}
+  minInterval: 5
+  maxInterval: 15
+  player: {fileID: 0}
+  maxDistance: 20
+  minVolume: 0.1
+  maxVolume: 1
 --- !u!1 &3753973050299529962 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100068, guid: 221f97476fc29794da96ee45e1fb7f2e,
