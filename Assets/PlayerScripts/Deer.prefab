@@ -356,7 +356,7 @@ MonoBehaviour:
   animalSounds:
   - {fileID: 8300000, guid: a3c15d076dada2740a41fc3394077f75, type: 3}
   minInterval: 1
-  maxInterval: 50
+  maxInterval: 100
   player: {fileID: 1853824337514684562, guid: 31e29ec0c7e0f844b8f73eef095b5cba, type: 3}
   maxDistance: 5
   minVolume: 0.1
