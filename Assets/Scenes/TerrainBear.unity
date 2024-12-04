@@ -2040,8 +2040,8 @@ MonoBehaviour:
   rotationSpeed: 10
   smoothSpeed: 1
   zoomSpeed: 25
-  maxZoom: 25
-  minZoom: 5
+  maxZoom: 20
+  minZoom: 2
 --- !u!114 &1227595949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3189,7 +3189,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 5
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 75
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -3247,8 +3247,8 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.041484833
-      value: 0.31183743
+      time: 0
+      value: 0.1388889
       inSlope: 0
       outSlope: 0
       tangentMode: 0
