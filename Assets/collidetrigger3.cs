@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CollideTrigger : MonoBehaviour
+public class collidetrigger3 : MonoBehaviour
 {
     [SerializeField] Animator transitionAnim;
     private void OnTriggerEnter(Collider other)
@@ -21,3 +21,4 @@ public class CollideTrigger : MonoBehaviour
             }
         }
     }
+}
