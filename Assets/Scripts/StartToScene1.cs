@@ -9,7 +9,7 @@ public class StartToScene1 : MonoBehaviour
 
     public void GoToScene1() 
     {
-        SceneManager.LoadScene("TerrainBear");
+        SceneManager.LoadScene("CutScene1");
     
     }
 

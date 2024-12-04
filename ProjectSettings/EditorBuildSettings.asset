@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TerrainBee.unity
     guid: 6d4d51f00c34deb4eb7ec0c896d9e477
+  - enabled: 1
+    path: Assets/Scenes/CutScene1.unity
+    guid: 54cc0e31dc5e40546b7cf53e6a38d6f7
   m_configObjects: {}
