@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,10 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class collidetrigger3 : MonoBehaviour
 {
+
     [SerializeField] Animator transitionAnim;
     private void OnTriggerEnter(Collider other)
     {
-
+        WaitForSecondsRealtime(11);
         Debug.Log(SceneManager.GetActiveScene().name);
         {
             StartCoroutine(LoadLevel());
@@ -20,5 +22,10 @@ public class collidetrigger3 : MonoBehaviour
                 transitionAnim.SetTrigger("Start");
             }
         }
+    }
+
+    private void WaitForSecondsRealtime(int v)
+    {
+        throw new NotImplementedException();
     }
 }
