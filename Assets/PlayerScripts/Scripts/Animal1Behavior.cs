@@ -20,8 +20,9 @@ public class Animal1Behavior : MonoBehaviour
 
         // If animator is not assigned, try to get it automatically
         if (animator == null)
+        {
             animator = GetComponent<Animator>();
-
+        }
         MoveToRandomPosition();
     }
 
