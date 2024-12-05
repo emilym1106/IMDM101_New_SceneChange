@@ -114,7 +114,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 03b866357e803664590ad1fb1400e3be, type: 3}
   minInterval: 1
   maxInterval: 100
-  player: {fileID: 1853824337514684562, guid: 31e29ec0c7e0f844b8f73eef095b5cba, type: 3}
+  player: {fileID: 2747044034698581662, guid: dc76187122c47ea41a9047f40bfe3bd4, type: 3}
   maxDistance: 20
   minVolume: 0.1
   maxVolume: 1

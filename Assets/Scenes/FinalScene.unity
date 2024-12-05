@@ -17605,6 +17605,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BetterBear
       objectReference: {fileID: 0}
+    - target: {fileID: 5399435757601725571, guid: e3924d58097f24f42aa40d4a9d33f11b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b48f1974f0ded1c40982b3dc17433ff4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 65702495048144492, guid: e3924d58097f24f42aa40d4a9d33f11b, type: 3}

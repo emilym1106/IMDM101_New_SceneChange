@@ -624,6 +624,21 @@ PrefabInstance:
       propertyPath: gravityMultiplier
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: 7330907188984655981, guid: 409d0d331408c2c4384f1b044949427b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b48f1974f0ded1c40982b3dc17433ff4, type: 2}
+    - target: {fileID: 7330907188984655981, guid: 409d0d331408c2c4384f1b044949427b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b48f1974f0ded1c40982b3dc17433ff4, type: 2}
+    - target: {fileID: 7330907188984655981, guid: 409d0d331408c2c4384f1b044949427b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: b48f1974f0ded1c40982b3dc17433ff4, type: 2}
     - target: {fileID: 7524413440213381345, guid: 409d0d331408c2c4384f1b044949427b,
         type: 3}
       propertyPath: m_Name
@@ -686,6 +701,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4718900698546756115, guid: 409d0d331408c2c4384f1b044949427b, type: 3}
+    - {fileID: 8171975651230549234, guid: 409d0d331408c2c4384f1b044949427b, type: 3}
+    - {fileID: 5901366767282049644, guid: 409d0d331408c2c4384f1b044949427b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1257,7 +1274,7 @@ Transform:
   m_GameObject: {fileID: 920027361}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.37, z: 0}
+  m_LocalPosition: {x: 0, y: 3.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1854,7 +1871,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2185,7 +2202,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2048993064}
-  - component: {fileID: 2048993063}
   - component: {fileID: 2048993065}
   - component: {fileID: 2048993066}
   m_Layer: 0
@@ -2195,33 +2211,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!54 &2048993063
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048993061}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!4 &2048993064
 Transform:
   m_ObjectHideFlags: 0
